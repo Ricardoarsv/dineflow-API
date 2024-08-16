@@ -6,7 +6,8 @@ const pc = require('picocolors')
 
 // Rutas de la API
 const userRoutes = require('../routes/user.route')
-
+const productRoutes = require('../routes/product.route')
+const authRoutes = require('../routes/auth.route')
 // Acceso a variables de entorno
 dotenv.config()
 
@@ -26,6 +27,11 @@ class Server {
 
     // Routes
     this.userRoutePath = '/api/v1/user'
+    this.authRoutesPath = '/api/v1/auth'
+    this.productsRoutePath = '/api/v1/products'
+    this.ordersRoutePath = '/api/v1/orders'
+    this.ordersItemsRoutePath = '/api/v1/orders_items'
+    this.tablesRoutePath = '/api/v1/tables'
 
     this.routes()
   }
@@ -43,6 +49,8 @@ class Server {
 
   routes () {
     this.app.use(this.userRoutePath, userRoutes)
+    this.app.use(this.productsRoutePath, productRoutes)
+    this.app.use(this.authRoutesPath, authRoutes)
   }
 
   listen () {
@@ -54,6 +62,11 @@ class Server {
         pc.green('Press Ctrl+C to quit \n'),
         pc.dim('--------------------------------------------------'),
         pc.blue('\n Avaible routes: \n'),
+        pc.yellow(`http://localhost:${this.port}/${this.productsRoutePath} \n`),
+        pc.yellow(`http://localhost:${this.port}/${this.authRoutesPath} \n`),
+        pc.yellow(`http://localhost:${this.port}/${this.ordersRoutePath} \n`),
+        pc.yellow(`http://localhost:${this.port}/${this.ordersItemsRoutePath} \n`),
+        pc.yellow(`http://localhost:${this.port}/${this.tablesRoutePath} \n`),
         pc.yellow(`http://localhost:${this.port}/${this.userRoutePath} \n`),
         pc.dim('--------------------------------------------------')
       )

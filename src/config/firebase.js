@@ -1,5 +1,6 @@
 const { initializeApp } = require('firebase/app')
 const { getFirestore } = require('firebase/firestore')
+const { getAuth } = require('firebase/auth')
 const dotenv = require('dotenv')
 
 dotenv.config()
@@ -17,5 +18,6 @@ const firebaseConfig = {
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
+const auth = getAuth(app)
 
-module.exports = db
+module.exports = { db, auth }
