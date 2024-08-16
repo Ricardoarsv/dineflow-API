@@ -3,49 +3,49 @@
 DineFlow API is a backend service built with Express.js designed to manage the flow of orders and interactions between customers, waiters, and chefs in a restaurant setting. The API facilitates user authentication, order management, and real-time communication between staff members.
 
 ## Project Structure
-project-root/
-│
-├── src/
-│ ├── config/
-│ │ └── ...
-│ │
-│ ├── controllers/
-│ │ └── ...
-│ │
-│ ├── middlewares/
-│ │ └── ...
-│ │
-│ ├── models/
-│ │ └── ...
-│ │
-│ ├── routes/
-│ │ └── ...
-│ │
-│ ├── services/
-│ │ └── ...
-│ │
-│ ├── sockets/
-│ │ └── ...
-│ │
-│ ├── utils/
-│ │ └── ...
-│ │
-│ ├── app.js
-│ └── server.js
-│
-├── tests/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ └── ...
-├── public/
-│   ├── img/
-│   └── ...
-├── .env
-├── .gitignore
-├── package.json
-└── README.md
-
+project-root/  
+│  
+├── src/  
+│ ├── config/  
+│ │ └── ...  
+│ │  
+│ ├── controllers/  
+│ │ └── ...  
+│ │  
+│ ├── middlewares/  
+│ │ └── ...  
+│ │  
+│ ├── models/  
+│ │ └── ...  
+│ │  
+│ ├── routes/  
+│ │ └── ...  
+│ │  
+│ ├── services/  
+│ │ └── ...  
+│ │  
+│ ├── sockets/  
+│ │ └── ...  
+│ │  
+│ ├── utils/    
+│ │ └── ...  
+│ │  
+│ ├── app.js  
+│ └── server.js  
+│  
+├── tests/  
+│ ├── controllers/  
+│ ├── models/  
+│ ├── routes/  
+│ └── ...  
+├── public/  
+│   ├── img/  
+│   └── ...  
+├── .env  
+├── .gitignore  
+├── package.json  
+└── README.md  
+  
 
 ## Installation
 
